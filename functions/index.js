@@ -17,7 +17,7 @@ exports.getCryptoCurrencyPrices = functions.https.onRequest((request, response) 
                         return data.json()
                     }
                 ).then(json => {
-                    const prices = json.prices;
+                    const prices = json.prices.inr;
                     let coinPrice = "";
                     switch (coin) {
                         case "Bitcoin":
